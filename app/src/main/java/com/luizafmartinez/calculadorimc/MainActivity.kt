@@ -1,5 +1,6 @@
 package com.luizafmartinez.calculadorimc
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -13,7 +14,8 @@ class MainActivity : AppCompatActivity() {
 
         btnCalcular = findViewById(R.id.btn_calcular)
         btnCalcular.setOnClickListener {
-
+            val intent = Intent(this,ResultadoActivity::class.java)
+            startActivity(intent)
         }
 
 
