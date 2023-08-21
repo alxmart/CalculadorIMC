@@ -38,12 +38,7 @@ class ResultadoActivity : AppCompatActivity() {
             }
             textResultado.text = resultado
 
-
-
         }
-
-
-
 
     }
 }
