@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnCalcular: Button
     private lateinit var editPeso: EditText
     private lateinit var editAltura: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,7 +22,11 @@ class MainActivity : AppCompatActivity() {
 
         btnCalcular.setOnClickListener {
 
-            val intent = Intent(this,ResultadoActivity::class.java)
+            val intent = Intent(
+                this,
+                ResultadoActivity::class.java
+            )
+
             val peso = editPeso.text.toString()
             val altura = editAltura.text.toString()
 
@@ -32,5 +37,6 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
+
     }
 }

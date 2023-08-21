@@ -9,6 +9,7 @@ class ResultadoActivity : AppCompatActivity() {
     private lateinit var textPeso: TextView
     private lateinit var textAltura: TextView
     private lateinit var textResultado: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado)
@@ -28,7 +29,7 @@ class ResultadoActivity : AppCompatActivity() {
             val imc = peso / (altura*altura)
 
             val resultado = if(imc < 18.5) {
-                 "Baixo"
+               "Baixo"
             } else if(imc in 18.5..24.9) {
                "Normal"
             } else if(imc in 25.0 .. 29.9) {
@@ -36,8 +37,8 @@ class ResultadoActivity : AppCompatActivity() {
             } else  {
                 "Obeso"
             }
-            textResultado.text = resultado
 
+            textResultado.text = resultado
         }
 
     }
